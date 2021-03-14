@@ -1,14 +1,14 @@
 const { Client, Collection, MessageEmbed } = require(`discord.js`);
 const { 
-  PREFIX, 
+  d!, 
   approveemoji,
   denyemoji 
 } = require(`../config.json`);
 
 module.exports = {
-  name: `help`,
+  name: `d!help`,
   description: `Gives you a list of all help Commands`,
-  aliases: ["h","commands"],
+  aliases: ["d!help","commands"],
   cooldown: 3,
   edesc: "Type help to get a short preview of all Commands, Type help <COMMANDNAME> to get extended information about this one command!",
   execute(message,args,client) {
@@ -18,7 +18,7 @@ module.exports = {
     let helpEmbed = new MessageEmbed()
       .setTitle("Harmony Help")
       .setAuthor('Click here to invite me!!', 'https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif', 'https://discord.com/api/oauth2/authorize?client_id=767885987740254291&permissions=49572160&scope=bot')
-      .setDescription(`**PREFIX:** \`${PREFIX}\``)
+      .setDescription(`**d!help:** \`${d!help}\``)
       .setFooter( client.user.username +`Type: ${PREFIX}help <Command>  for more information!`, "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
       .setColor("#F0EAD6");
 
@@ -85,7 +85,7 @@ module.exports = {
           case "ping":
             ifargstruedothis=19
           break;
-          case "prefix":
+          case "d!":
             ifargstruedothis=20
           break;
           case "uptime":
